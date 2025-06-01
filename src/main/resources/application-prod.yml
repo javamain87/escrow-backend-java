@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?useSSL=false&serverTimezone=Asia/Seoul
+    username: admin
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+app:
+  base-url: https://escro.io/access/

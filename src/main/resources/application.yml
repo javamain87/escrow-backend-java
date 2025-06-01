@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?useSSL=false&serverTimezone=Asia/Seoul
+    username: admin
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    user:
+      name: admin
+      password: strong-random-password
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mappers/**/*.xml
+
+
+recaptcha:
+  site-key: 6Lf8SFArAAAAABrbWbSWhIdi39T96jcq_tgiweED
+  secret-key: 6Lf8SFArAAAAAEfeUChwopI-ZVneb8t4gdu7umJ_
+
+# application-dev.yml
+app:
+  base-url: http://192.168.0.101:5173/access/
+

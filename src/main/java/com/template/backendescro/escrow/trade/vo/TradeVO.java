@@ -21,9 +21,11 @@ public class TradeVO {
         private Double amount;
         private String description;
         private String deliveryTime;
-
+        @SkipValidation
+        private String phone;
         // 구매자 이름 / 전화번호 필드 추가
         private String requesterName;
+        @SkipValidation
         private String requesterEmail;
         @SkipValidation
         private String clientIp;
@@ -60,6 +62,8 @@ public class TradeVO {
                 result.tradePassword = UUID.randomUUID().toString().replace("-", "").substring(0, 32);
                 result.role = tradeVO.getRole();
                 result.payment = tradeVO.getPayment();
+                result.amount = tradeVO.getAmount();
+                result.phone = tradeVO.getPhone();
                 result.requesterEmail = tradeVO.getRequesterEmail();
                 result.amount = tradeVO.getAmount();
                 result.description = tradeVO.getDescription();

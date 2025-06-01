@@ -19,8 +19,8 @@ mybatis:
 
 
 recaptcha:
-  site-key: 6Lf8SFArAAAAABrbWbSWhIdi39T96jcq_tgiweED
-  secret-key: 6Lf8SFArAAAAAEfeUChwopI-ZVneb8t4gdu7umJ_
+  site-key: 6Le4H1IrAAAAAAdlQGO8PmheqgyXB85164mkVS12
+  secret-key: 6Le4H1IrAAAAAFhk7R272RrVtnnN1mtUYY7yYOuE
 
 # application-dev.yml
 app:

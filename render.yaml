@@ -1,20 +1,19 @@
 services:
   - type: web
     name: escrow-backend
-    runtime: java
-    buildCommand: ./gradlew build
-    startCommand: java -jar build/libs/backendEscro-0.0.1-SNAPSHOT.jar
+    runtime: docker
+    dockerfilePath: ./Dockerfile
     plan: free
     envVars:
       - key: SPRING_PROFILES_ACTIVE
-        value: prod
+        value: dev
       - key: DB_URL
-        value: ${DB_URL}
+        value: jdbc:postgresql://dpg-d0u2rp63jp1c73faheag-a.oregon-postgres.render.com:5432/escrow_qjts
       - key: DB_USERNAME
-        value: ${DB_USERNAME}
+        value: admin
       - key: DB_PASSWORD
-        value: ${DB_PASSWORD}
+        value: aAJ9uWyVp0tiA6icjG6HWfG8ATyAGXTe
       - key: RECAPTCHA_SITE
-        value: ${RECAPTCHA_SITE}
+        value: 6Lf8SFArAAAAABrbWbSWhIdi39T96jcq_tgiweED
       - key: RECAPTCHA_SECRET
-        value: ${RECAPTCHA_SECRET}
+        value: 6Lf8SFArAAAAAEfeUChwopI-ZVneb8t4gdu7umJ_
